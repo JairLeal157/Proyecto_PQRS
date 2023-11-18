@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "Pqrs", description = "Recursos de PQRS")
 
 @RestController
-@RequestMapping("/v1/pqrs")
+@RequestMapping("v1/pqrs")
 @CrossOrigin("*")
 public class PqrsController {
 
@@ -28,7 +28,7 @@ public class PqrsController {
     IPqrsService pqrsService;
 
     // Método para crear una PQRS
-    @Operation(summary = "Guardar una pqrs")
+    @Operation(summary = "Guardar una pqrss")
     @ApiResponses({
             @ApiResponse(responseCode = "200", content = {
                     @Content(schema = @Schema(implementation = Pqrs.class), mediaType = MediaType.APPLICATION_JSON_VALUE)
@@ -48,7 +48,6 @@ public class PqrsController {
 
         return new ResponseEntity<>(pqrsCreated,HttpStatus.CREATED);
     }
-
 
     // Método para borrar una PQRS
     @Operation(summary = "Borrar una pqrs")

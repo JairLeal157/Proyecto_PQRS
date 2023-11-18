@@ -1,11 +1,8 @@
 package com.udea.pqrs.model.entity;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 @Getter
@@ -18,7 +15,6 @@ public class PqrsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotNull
     @Column(name = "TIPO_PQRS", nullable = false)
     private String tipoPqrs;
 
