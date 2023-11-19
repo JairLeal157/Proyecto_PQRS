@@ -20,5 +20,4 @@ public interface PqrsRepository extends CrudRepository<PqrsEntity, Integer> {
 
     void deleteById(Integer id); // eliminar una pqrs por id
 
-
 }

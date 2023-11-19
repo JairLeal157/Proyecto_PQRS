@@ -1,10 +1,15 @@
 package com.udea.pqrs.model.entity;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
+
 import lombok.Setter;
 import java.time.LocalDate;
 
+@Data
 @Getter
 @Setter
 @Entity
@@ -24,10 +29,8 @@ public class PqrsEntity {
     @Column(name = "QUEJA_HACIA")
     private Integer quejaHacia;
 
-
     @Column(name = "CREADO_POR_ROL")
     private String creadoPorRol;
-
 
     @Column(name = "ESTADO_PQRS")
     private String estadoPqrs;
@@ -37,6 +40,7 @@ public class PqrsEntity {
 
     @Column(name = "ESTADO_APROBACION")
     private String estadoAprobacion;
+
 
     @Column(name = "FECHA_CREACION")
     private LocalDate fechaCreacion;
@@ -48,7 +52,6 @@ public class PqrsEntity {
 
     @Column(name = "TIPO_QUEJA")
     private String tipoQueja;
-
 
     @Column(name = "TIPO_RECLAMO")
     private String tipoReclamo;

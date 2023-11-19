@@ -56,7 +56,7 @@ public class PqrsServiceImpl implements IPqrsService {
         return pqrsResponse;
     }
 
-    @Override
+    @Override  // listar todas las pqrs
     public Iterable<Pqrs> listPqrs() {
 
         List<PqrsEntity> lista = pqrsRepository.findAll();
@@ -66,7 +66,7 @@ public class PqrsServiceImpl implements IPqrsService {
         return listaPqrs;
     }
 
-    @Override
+    @Override // obtener una pqrs por id
     public Pqrs getPqrsById(Integer id) {
 
         Optional<PqrsEntity> pqrsEResult  = pqrsRepository.findById(id);

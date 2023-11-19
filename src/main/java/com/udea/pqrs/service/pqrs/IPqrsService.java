@@ -13,5 +13,4 @@ public interface IPqrsService {
     public Pqrs getPqrsById(Integer id);
 
 
-
 }
